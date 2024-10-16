@@ -44,7 +44,7 @@ export default [
       ...ftFlow.recommended,
       "no-unused-vars": "warn",
       "no-undef": "warn",
-      "no-empty": "warn",
+      // "no-empty": "warn",
       "no-extra-boolean-cast": "warn",
       "prettier/prettier": "warn"
     }
