@@ -3,9 +3,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: dark light;
+  color: rgba(255, 255, 255, 0.87); /* Default text color for dark mode */
+  background-color: #121212; /* Dark background */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,11 +15,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #82aaff; /* Lighter blue for dark mode */
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #539bf5; /* Darker blue on hover */
 }
 
 body {
@@ -28,6 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #121212; /* Ensure background stays dark */
 }
 
 h1 {
@@ -42,27 +43,36 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #1e1e1e; /* Dark button background */
+  color: #fff; /* White text for contrast */
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #82aaff;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+/* Light theme adjustments */
+@media (prefers-color-scheme: dark) {
   :root {
     color: #213547;
     background-color: #ffffff;
+  }
+  a {
+    color: #646cff;
   }
   a:hover {
     color: #747bff;
   }
   button {
     background-color: #f9f9f9;
+    color: #000; /* Dark text for contrast in light mode */
+  }
+  body {
+    background-color: #ffffff; /* Light background for light mode */
   }
 }

@@ -3,14 +3,14 @@ import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query/react';
 
 // Import the RTK Query API slice (to be created)
-import { workspaceApi } from '../features/api/workspaceApi';
-import { systemApi } from "../features/api/systemApi.ts";
-import { threadApi } from "../features/api/threadApi.ts";
-import { openAIApi } from "../features/api/openAiApi.ts";
-import { embedApi } from "../features/api/embedApi.ts";
-import { usersApi } from "../features/api/usersApi.ts";
-import { documentApi } from "../features/api/documentApi.ts";
-import { adminApi } from "../features/api/adminApi.ts";
+import { workspaceApi } from '../services/api/workspaceApi';
+import { systemApi } from "../services/api/systemApi.ts";
+import { threadApi } from "../services/api/threadApi.ts";
+import { openAIApi } from "../services/api/openAiApi.ts";
+import { embedApi } from "../services/api/embedApi.ts";
+import { usersApi } from "../services/api/usersApi.ts";
+import { documentApi } from "../services/api/documentApi.ts";
+import { adminApi } from "../services/api/adminApi.ts";
 
 export const store = configureStore({
   reducer: {
